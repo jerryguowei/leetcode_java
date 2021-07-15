@@ -3,7 +3,13 @@ package com.duduanan.leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class N0004_GenerateParentheses {
+/***
+ * 22. Generate Parentheses
+ * Medium
+ * Share
+ * Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+ */
+public class N0022_GenerateParentheses {
     public List<String> generateParenthesis(int n) {
         List<String> result = new ArrayList<>();
         generate(n, 0, 0, new StringBuilder(), result);
@@ -28,7 +34,7 @@ public class N0004_GenerateParentheses {
         }
     }
     public static void main(String[] args) {
-        N0004_GenerateParentheses generateParentheses4 = new N0004_GenerateParentheses();
+        N0022_GenerateParentheses generateParentheses4 = new N0022_GenerateParentheses();
         List<String> result  = generateParentheses4.generateParenthesis(3);
         System.out.println(result);
     }
