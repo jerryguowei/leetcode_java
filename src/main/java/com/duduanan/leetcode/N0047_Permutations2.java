@@ -35,12 +35,10 @@ public class N0047_Permutations2 {
             res.add(new ArrayList<>(curr));
             return;
         }
-        Set<Integer> choose = new HashSet<>();
         for(int i = 0; i < nums.length; i++){
+            if(i > 0 && nums[i] == nums[i-1] && !visited[i-1]) continue;
             if(visited[i]) continue;
-            if(choose.contains(nums[i])) continue;
             curr.add(nums[i]);
-            choose.add(nums[i]);
             visited[i] = true;
             helper(res, curr, nums,visited);
             curr.remove(curr.size() - 1);
