@@ -28,9 +28,7 @@ public class N0045_JumpGameTwo {
         }
         return count;
     }
-
-
-        public int jump1(int[] nums) {
+    public int jump1(int[] nums) {
             int maxIndexReachable=0,end=0,jumps=0;
             for(int i=0;i<nums.length-1 && end<nums.length-1;i++){
                 maxIndexReachable=Math.max(maxIndexReachable,nums[i]+i);
